@@ -6,7 +6,7 @@ const blogRoutes = require('./routes/blog');
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(adminRoutes);
+app.use('/admin', adminRoutes);
 app.use(blogRoutes);
 
 app.use((req, res, next) => {
